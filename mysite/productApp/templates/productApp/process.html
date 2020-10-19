@@ -12,6 +12,7 @@
             <ul>
                 {% for classification in classification_list %}
                     <li>
+                        
                         <p>Product: {{ classification.product.id }}, Rule: {{classification.rule.id}}<br>
                         Result: {{classification.result}} </p>
                     </li>
