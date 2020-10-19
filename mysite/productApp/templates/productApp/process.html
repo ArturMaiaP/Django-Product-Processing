@@ -1,0 +1,25 @@
+<head>
+    
+    <title>Processed Products</title>
+</head>
+<body>
+
+    <div >
+        <h2>All products processed!</h2>
+    </div>
+    <div>
+        {%if classification_list %}
+            <ul>
+                {% for classification in classification_list %}
+                    <li>
+                        <p>Product: {{ classification.product.id }}, Rule: {{classification.rule.id}}<br>
+                        Result: {{classification.result}} </p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No products are available.</p>
+        {% endif %}
+    </div>
+
+</body>

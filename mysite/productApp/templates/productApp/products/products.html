@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Product</title>
+</head>
+<body>
+
+    <div >
+        <h2>All products!</h2>
+    </div>
+    <div>
+        {%if products_list %}
+            <ul>
+                {% for product in products_list %}
+                    <li>
+                        <p>Produto: {{ product.id }}, {{ product.cor }}, {{ product.tipo }}, {{ product.codigo_gtin }},
+                        </p>
+
+                        {%for classification in classification_list %}
+                            {%if classification.product.id == product.id%}
+                                <p>
+                                    Rule: {{classification.rule.id}}<br>
+                                    Result: {{classification.result}}
+                                </p>
+                            {% endif %}
+                        {% endfor %}
+
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No products are available.</p>
+        {% endif %}
+    </div>
+
+</body>
+</html>
