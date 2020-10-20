@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rule</title>
+</head>
+<body>
+ <div >
+        <h2>All Rules!</h2>
+    </div>
+    <div>
+        {%if rules_list %}
+            <ul>
+                {% for rule in rules_list %}
+                    <li>
+                        <p>Rule: {{ rule.id }}<br>
+                        Field: {{rule.field}}<br>
+                        Value: {{rule.value}}</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No products are available.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

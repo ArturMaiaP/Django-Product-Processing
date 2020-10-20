@@ -4,8 +4,8 @@ from django.db import models
 
 class Product(models.Model):
 	cor = models.CharField(max_length=200)
-	codigo_gtin = models.CharField(max_length=200)
 	tipo = models.CharField(max_length=200)
+	codigo_gtin = models.CharField(max_length=200)
 	processado = models.BooleanField(default = False)
 
 	def add_product(self):
