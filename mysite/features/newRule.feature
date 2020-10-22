@@ -6,12 +6,11 @@ Feature: New rule
     Given I want to add a new rule with the field "cor"
     And With the value "marrom"
     When I save the rule
-    Then I should see all rules registered on the database
-    And the products should be processed according to the new rule
+    Then I should see the rule registered on the database
 
 
   Scenario: Invalid Form
     Given I want to add a new rule with the field "cor"
-    And With the value None
+    And With the value " "
     When I save the rule
     Then The system should return the message: "Form invalid. Please, try again!"
