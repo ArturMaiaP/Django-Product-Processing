@@ -1,16 +1,15 @@
 # Django-Product-Processing
+# URL Documentation (Endpoints).
 
-#URL Documentation (Endpoints).
-
-#Engine
+## Engine
 GET productApp/process - Process products based on the registered rules;
 
-#Product
+## Product
 GET productApp/products - Return all products and their respective classifications;
 GET productApp/products/new - Return a form to add a new product to the database;
 POST productApp/products/new - reates a new product;
 
-#RULES
+## RULES
 GET productApp/rules - Return all rules;
 GET productApp/rules/new - Return a form to add a new rule to the database;
 POST productApp/rules/new - Creates a new rule;
