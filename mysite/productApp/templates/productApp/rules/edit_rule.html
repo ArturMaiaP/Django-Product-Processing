@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rule</title>
+</head>
+<body>
+    <div >
+        <h2>Add a new rule!</h2>
+    </div>
+
+    <form method="post">
+        {% csrf_token %}
+        {%if rule %}
+            <p>
+                <label for="field" >Campo: </label>
+                <input id="field" type="text" name="field" value="{{rule.field}}">
+            </p>
+            <p>
+                <label for="value">Valor: </label>
+                <input id="value" type="text" name="value" value="{{rule.value}}">
+            </p>
+        {% endif %}
+        <input type="submit" value="OK">
+    </form>
+</body>
+</html>

@@ -6,7 +6,7 @@ from .forms import ProductForm
 from .models import Product
 from .models import Classification
 
-def products_new(request):
+def new_product(request):
     template = loader.get_template('productApp/products/add_product.html')
     if request.method =='POST':
         form = ProductForm(request.POST)
