@@ -10,14 +10,15 @@ def new_product(request):
     template = loader.get_template('productApp/products/add_product.html')
     if request.method =='POST':
         form = ProductForm(request.POST)
-        print("EntrouAqui")
         if form.is_valid():
-            print("FormVAlido")
             obj, created = Product.objects.get_or_create(cor = request.POST.get('cor'),
                                                          tipo=request.POST.get('tipo'),
                                                          codigo_gtin=request.POST.get('codigo_gtin'))
             obj.save()
             return HttpResponseRedirect('/productApp/products')
+        else:
+            error = "<h2> Form invalid. Please, try again!</h2>"
+            return HttpResponse(error)
     else:
         form = ProductForm()
 
