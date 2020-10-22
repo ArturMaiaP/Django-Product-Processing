@@ -3,6 +3,7 @@ from django.http import HttpResponse
 
 from .service.engine import *
 from .models import Classification
+from .models import Rule
 
 
 # Create your views here.
