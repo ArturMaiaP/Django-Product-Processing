@@ -30,11 +30,13 @@ def save_rule(context):
     ctx.find_element(By.ID, "submit-rule").click()
     time.sleep(3)
 
+
+#implementar assert
 @then('I should see the rule registered on the database')
 def get_rules(context):
     assert True
 
-
+#implementar assert
 @then('The system should return the message: "{message}"')
 def process_products(context,message):
     assert True

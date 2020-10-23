@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Product</title>
+</head>
+<body>
+    
+    <div >
+        <h2>Product {{product.id}}</h2>
+    </div>
+    <div>
+        <ul>
+            <li>Cor: {{product.cor}}</li>
+            <li>Tipo: {{product.tipo}}</li>
+            <li>Código Gtin: {{product.codigo_gtin}}</li>
+            <li>Processado: {{product.processado}}</li>
+            <li>
+                {%for classification in classification_list %}
+                    <p> Rule: {{classification.rule.id}}<br>
+                        Result: {{classification.result}}</p>
+                {% endfor %}
+            </li>
+
+        </ul>
+    </div>
+
+</body>
+</html>

@@ -1,4 +1,5 @@
 from django.template import loader
+from django.shortcuts import get_object_or_404
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 
@@ -30,4 +31,13 @@ def products(request):
     classifications = Classification.objects.all()
 
     context = {'products_list': products, 'classification_list': classifications}
+    return HttpResponse(template.render(context, request))
+
+def get_product(request, id):
+    template = loader.get_template('productApp/products/get_product.html')
+    product = get_object_or_404(Product, pk=id)
+
+    classifications = Classification.objects.filter(product = id)
+
+    context = {'product': product, 'classification_list': classifications}
     return HttpResponse(template.render(context, request))
