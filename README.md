@@ -6,7 +6,7 @@
 ## Product
 * GET: productApp/products - Return all products and their respective classifications;
 * GET: productApp/products/new - Return a form to add a new product to the database;
-* POST: productApp/products/new - reates a new product;
+* POST: productApp/products/new - Creates a new product;
 * GET: productApp/products/{id} - Return the product by id and its classifications;
 
 ## RULES
